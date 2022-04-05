@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+
+
+
+<main class="container" style="margin-top: 8rem">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1>Edit Product</h1>
+            <form  action="/products/<%=product._id%>?_method=PATCH" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name of the product" value="<%= product.name%>" required>
+
+            </div>
+            <div class="mb-3">
+                <label for="img" class="form-label">Image</label>
+            <input type="text" class="form-control" name="img" id="img " value="<%=product.img%>">
+            </div>
+             <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input class="form-control" type="number" name="price" id="price" placeholder="Price of the product" value="<%=product.price%>" required>
+            </div>
+               <div class="mb-3">
+                <label for="desc" class="form-label">Description</label>
+                <input class="form-control" type="text" name="desc" id="desc" placeholder="Here goes the Description of the product" value="<%=product.desc%>">
+            </div>
+            <button type="submit" class="btn btn-success btn-small">Submit details</button>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+
+
+
+
+
+<%- include('../partials/footer') %>

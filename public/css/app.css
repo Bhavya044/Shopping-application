@@ -1,0 +1,23 @@
+
+
+main{
+    margin-top: 8rem !important;
+}
+
+.card-img-top{
+    height: 13rem;
+}
+.card{
+    box-shadow: 1px 0.8 2px #b5bac0;
+}
+.count-notif {
+     vertical-align: middle;
+     margin-left: -15px;
+     margin-top: -20px;
+     font-size: 13px;
+}
+
+.badge-warning {
+     padding: 3px;
+}
+

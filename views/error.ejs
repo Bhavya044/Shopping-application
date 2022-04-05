@@ -1,0 +1,34 @@
+<%- include ('./partials/header') %>
+<%- include('./partials/navbar') %>
+
+
+<style>
+     .error{
+          margin-top: 110px !important;
+     
+     }
+.image{
+    
+     margin-left: 400px;
+}
+
+</style>
+
+<div class= " error container">
+
+
+                 <% if(error && error.length){ %>
+                    <div class="alert alert-danger alert-dismissible fade show  flash" role="alert">
+                         <%=error%>
+                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <%}%>
+                  <h1>
+          Error occurred </h1>
+        
+   
+     </div>
+  <div class="image">
+<img style=" height: 380px;
+     width: 460px;" src="https://cdn.dribbble.com/users/2458211/screenshots/15485004/media/4a3c9c12dd944a0bc3b9a63bb984aba2.png?compress=1&resize=400x300">
+  </div>

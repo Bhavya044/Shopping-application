@@ -1,0 +1,258 @@
+
+<%- include('../partials/header') %>
+
+<style>
+    a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 600px;
+  /* background-color: #333; */
+  /*height: 100%; */
+  /*min-height: 100%;*/
+  background: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') no-repeat center center fixed; 
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+
+}
+.lead{
+  color: aliceblue !important;
+font-size:30px !important ;
+
+}
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@keyframes wobble {
+  0% {transform: translateX(0%);}
+  15% {transform: translateX(-25%) rotate(-5deg);}
+  30% {transform: translateX(20%) rotate(3deg);}
+  45% {transform: translateX(-15%) rotate(-3deg);}
+  60% {transform: translateX(10%) rotate(2deg);}
+  75% {transform: translateX(-5%) rotate(-1deg);}
+  100% {transform: translateX(0%);}
+}
+.wobble {
+  animation-name: wobble;
+}
+
+.button-flip {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height:30px;
+  text-align:center;
+  font-family: 'arial';
+  transform-style: preserve-3d;
+  cursor: pointer;
+  box-sizing:border-box;
+  transition:all 0.5s ease;
+}
+.button-flip > .button-flip-face, .button-flip > .button-flip-face-back {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height:30px;
+  line-height: 28px;
+  border:1px solid #35495e;
+  color:#a7caef;
+  border-radius: 4px;
+  overflow: hidden;
+  transition:all 0.5s ease;
+}
+.button-flip > .button-flip-face-back {
+  opacity: 0;
+  color: transparent;
+  background-color:#35495e;
+  transform: rotateY(180deg);
+}
+.button-flip:hover > .button-flip-face {
+  opacity: 0;
+  color: transparent;
+}
+.button-flip:hover > .button-flip-face-back {
+  opacity: 1;
+  color:#42b883;
+}
+.button-flip:hover {
+  transform: rotateY(180deg);
+}
+  </style>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="container">
+
+          <div class="masthead clearfix">
+            <div class="container inner">
+              <h3 class="masthead-brand text animated wobble">Shopify</h3>
+   
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="/register">SignUp</a></li>
+                  <li><a href="/login">SignIn</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Shopify Official</h1>
+            <p class="lead">Explore our huge range of fashionable products. Sale is Live now. Use code DOGO20 to get 20% discount on all products.</p>
+            <p class="lead">
+              
+          <a href="/products" class="button-flip">
+  <span class="button-flip-face">Shop</span>
+  <span class="button-flip-face-back">Now</span>
+</a>
+
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <%- include ('../partials/footer') %>
