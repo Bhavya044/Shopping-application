@@ -1,5 +1,6 @@
 <%- include ('../partials/header') %>
 <%- include('../partials/navbar') %>
+<br><br>
 
  <style>
     :root{
@@ -25,7 +26,8 @@
       position: absolute;
       top: 55%;
       left: 50%;
-      width: 600px;
+      width: 380px;
+     margin-top: 80px;
 
       padding: 40px;
       transform: translate(-50%, -50%);
@@ -235,10 +237,16 @@ input[type="radio"]:checked + label {
 }
 
 
-  </style>
-      <%- include("../partials/flash") %>
 
-<main class="container">
+  </style>
+  <br><br>
+     <%- include("../partials/flash") %>
+   
+  <main>
+   
+
+<div class="container">
+
  
 
 <div class="login-box">
@@ -274,9 +282,12 @@ input[type="radio"]:checked + label {
        </button>
       </a>
     </form>
+    <p style="color: #f1f3f5;float: right;">Already a registered user?<a href="/login"> Login </a></p>
   </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  </main>
 
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</main>
+<br><br><br><br><br>
 
   <%- include ('../partials/footer') %>

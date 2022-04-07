@@ -73,6 +73,8 @@ router.get('/logout', (req, res) => {
      res.redirect('/login');
 })
 
+
+
 //payment route
 router.get('/payment',isLoggedIn, async(req, res) => {
 
@@ -81,6 +83,8 @@ router.get('/payment',isLoggedIn, async(req, res) => {
      res.render('auth/payment',{user})
 
 })
+
+
 
 
 module.exports = router;

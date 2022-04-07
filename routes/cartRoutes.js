@@ -30,6 +30,15 @@ router.get('/user/cart',isLoggedIn,async (req, res) => {
 })
 
 
+router.get('/user/confirmation',isLoggedIn,async (req, res) => {
+     
+     const uid = req.user._id;
+     const user = await User.findById(uid).populate('cart');
+
+     res.render('auth/orderPlaced',{user});
+
+})
+
 //remove from the cart
 router.delete('/cart/:id/item/:itemId',async(req,res)=>{
 
